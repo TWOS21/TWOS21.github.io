@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘双 · 个人作品集</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    background: #f8fafc;
+    line-height: 1.6;
+  }
+
+  /* ===== Nav ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,.85); backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e9edf2;
+    padding: 0 40px; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  nav .logo { font-weight: 700; font-size: 18px; color: #1e3a5f; }
+  nav .links { display: flex; gap: 28px; }
+  nav .links a {
+    text-decoration: none; color: #475569; font-size: 14px;
+    font-weight: 500; transition: color .2s;
+  }
+  nav .links a:hover { color: #1e3a5f; }
+
+  /* ===== Sections ===== */
+  section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; }
+  .sec-label {
+    display: inline-block;
+    background: #e8edf5; color: #1e3a5f;
+    font-size: 12px; font-weight: 600; letter-spacing: 1px;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 20px;
+  }
+  .sec-title {
+    font-size: 32px; font-weight: 700; color: #0f172a;
+    margin-bottom: 16px;
+  }
+  .sec-desc {
+    font-size: 16px; color: #64748b; max-width: 600px;
+    margin-bottom: 48px;
+  }
+
+  /* ===== Hero ===== */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    padding: 100px 40px; max-width: 1100px; margin: 0 auto;
+  }
+  .hero-content { max-width: 700px; }
+  .hero-greeting {
+    font-size: 15px; color: #1e3a5f; font-weight: 600;
+    margin-bottom: 12px; letter-spacing: 1px;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 7vw, 64px); font-weight: 800;
+    color: #0f172a; line-height: 1.15; margin-bottom: 12px;
+  }
+  .hero h1 span { color: #1e3a5f; }
+  .hero-sub {
+    font-size: 20px; color: #475569; font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .hero p {
+    font-size: 17px; color: #64748b; max-width: 560px;
+    margin-bottom: 36px;
+  }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    text-decoration: none; display: inline-flex; align-items: center;
+    gap: 8px; padding: 12px 28px; border-radius: 10px;
+    font-size: 15px; font-weight: 600; transition: all .25s;
+    cursor: pointer; border: none;
+  }
+  .btn-primary {
+    background: #1e3a5f; color: #fff;
+  }
+  .btn-primary:hover { background: #152d4a; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(30,58,95,.25); }
+  .btn-outline {
+    background: transparent; color: #1e3a5f;
+    border: 2px solid #d0d8e5;
+  }
+  .btn-outline:hover { border-color: #1e3a5f; transform: translateY(-2px); }
+
+  /* ===== About ===== */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  }
+  .about-card {
+    background: #fff; border-radius: 16px; padding: 36px;
+    border: 1px solid #e9edf2; transition: transform .25s, box-shadow .25s;
+  }
+  .about-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.06); }
+  .about-card h3 { font-size: 18px; margin-bottom: 16px; color: #0f172a; }
+  .about-card ul { list-style: none; }
+  .about-card li {
+    padding: 6px 0; color: #475569; font-size: 15px;
+    display: flex; gap: 10px;
+  }
+  .about-card li::before { content: "▹"; color: #1e3a5f; font-weight: 700; }
+
+  /* ===== Projects ===== */
+  .projects-grid { display: grid; gap: 32px; }
+  .project-card {
+    background: #fff; border-radius: 16px; padding: 40px;
+    border: 1px solid #e9edf2; transition: transform .25s, box-shadow .25s;
+  }
+  .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.06); }
+  .project-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 6px; color: #0f172a; }
+  .project-tags {
+    display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 18px;
+  }
+  .project-tags span {
+    background: #eef2f8; color: #1e3a5f; font-size: 12px;
+    font-weight: 600; padding: 3px 12px; border-radius: 20px;
+  }
+  .project-desc { color: #475569; font-size: 15px; margin-bottom: 20px; line-height: 1.7; }
+  .project-work {
+    background: #f8fafc; border-radius: 10px; padding: 20px 24px;
+    border-left: 3px solid #1e3a5f;
+  }
+  .project-work p { font-size: 14px; color: #334155; padding: 4px 0; display: flex; gap: 8px; }
+  .project-work p::before { content: "→"; color: #1e3a5f; font-weight: 700; flex-shrink: 0; }
+
+  /* ===== Skills ===== */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;
+  }
+  .skill-group {
+    background: #fff; border-radius: 14px; padding: 28px;
+    border: 1px solid #e9edf2;
+  }
+  .skill-group h4 { font-size: 14px; font-weight: 700; color: #1e3a5f; margin-bottom: 14px; letter-spacing: .5px; }
+  .skill-group .techs { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill-group .techs span {
+    background: #f1f4f9; color: #334155; font-size: 13px;
+    padding: 4px 14px; border-radius: 8px; font-weight: 500;
+  }
+
+  /* ===== Contact ===== */
+  .contact-box {
+    background: #fff; border-radius: 16px; padding: 48px;
+    text-align: center; border: 1px solid #e9edf2;
+  }
+  .contact-box h3 { font-size: 24px; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
+  .contact-box p { color: #64748b; margin-bottom: 28px; }
+  .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+  .contact-links a {
+    text-decoration: none; color: #1e3a5f; font-weight: 600; font-size: 15px;
+    padding: 10px 24px; border: 2px solid #d0d8e5; border-radius: 10px;
+    transition: all .2s;
+  }
+  .contact-links a:hover { border-color: #1e3a5f; background: #f1f6ff; }
+
+  /* ===== Footer ===== */
+  footer {
+    text-align: center; padding: 32px 40px; color: #94a3b8;
+    font-size: 13px; border-top: 1px solid #e9edf2;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    section { padding: 64px 24px; }
+    .hero { padding: 100px 24px; }
+    nav { padding: 0 20px; }
+    nav .links { gap: 16px; }
+    .about-grid { grid-template-columns: 1fr; }
+    .contact-box { padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="logo">刘双</div>
+  <div class="links">
+    <a href="#about">关于</a>
+    <a href="#projects">项目</a>
+    <a href="#skills">技术栈</a>
+    <a href="#contact">联系</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-greeting">HELLO, 我是</div>
+    <h1>刘 <span>双</span></h1>
+    <div class="hero-sub">后端开发 · Python FastAPI · 全栈 + 移动端</div>
+    <p>两个完整项目的从零到一交付经验：Seen 个人展馆平台（Web + 原生 Android APP）和 ChatApp 即时通讯（Flutter 跨平台）。熟练使用 AI 编程工具提效，主导架构设计与问题定位。</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary">查看项目 ↓</a>
+      <a href="#contact" class="btn btn-outline">联系我</a>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about">
+  <span class="sec-label">ABOUT</span>
+  <h2 class="sec-title">关于我</h2>
+  <p class="sec-desc">我不追求写完美的代码，而是追求交付能用的产品。每个项目都从 0 开始，到完整的双端/多端交付。</p>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>💡 我的方式</h3>
+      <ul>
+        <li>独立完成全栈项目架构设计，从数据库到移动端</li>
+        <li>发挥 AI 编程工具的提效作用，但不依赖 AI 做技术判断</li>
+        <li>始终从前后端契约一致的视角定位问题</li>
+        <li>每个项目都覆盖 Web / 跨平台 / 原生中的两种以上端</li>
+      </ul>
+    </div>
+    <div class="about-card">
+      <h3>⚡ 技术方向</h3>
+      <ul>
+        <li>后端：Python FastAPI · SQLAlchemy · WebSocket · JWT</li>
+        <li>数据库：MySQL · SQLite · RESTful API 设计</li>
+        <li>移动端：Flutter / Kotlin Compose 原生开发</li>
+        <li>前端：Vue 3 + TypeScript · 前后端分离</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <span class="sec-label">PROJECTS</span>
+  <h2 class="sec-title">项目经历</h2>
+  <p class="sec-desc">两个独立完成的完整项目，覆盖后端 + 移动端 + Web 端。</p>
+  <div class="projects-grid">
+
+    <!-- Seen -->
+    <div class="project-card">
+      <h3>Seen 个人展馆平台</h3>
+      <div class="project-tags">
+        <span>FastAPI</span><span>MySQL</span><span>Vue3/TS</span>
+        <span>Kotlin/Compose</span><span>JWT</span>
+      </div>
+      <div class="project-desc">
+        面向创作者的个人作品线上展馆：作品展示、分区管理、点赞评论收藏互动、数据看板排行榜。Web 端 + 原生 Android APP 双端覆盖，15 天从 0 到 1 交付。
+      </div>
+      <div class="project-work">
+        <p>基于 Python FastAPI + SQLAlchemy ORM 设计 RESTful API，8 个路由模块、7 张数据库表</p>
+        <p>利用 Kotlin + Jetpack Compose 开发原生 Android APP 8 个页面，功能与 Web 端对齐</p>
+        <p>通过 ContentResolver + Retrofit Multipart 解决 Android 图片上传全链路兼容性问题</p>
+        <p>修复收藏列表类型不匹配崩溃，崩溃率 100% → 0%；Gzip 压缩 JS 体积降 62%</p>
+      </div>
+    </div>
+
+    <!-- ChatApp -->
+    <div class="project-card">
+      <h3>ChatApp 即时通讯</h3>
+      <div class="project-tags">
+        <span>FastAPI</span><span>WebSocket</span><span>Flutter/Dart</span>
+        <span>SQLite</span><span>Provider</span>
+      </div>
+      <div class="project-desc">
+        对标微信核心功能的即时通讯软件：文字/图片/语音/视频聊天、好友系统、朋友圈。REST + WebSocket 双通道架构，APK 真机运行通过。
+      </div>
+      <div class="project-work">
+        <p>基于 FastAPI 设计 REST + WebSocket 双通道架构，6 个路由模块</p>
+        <p>自实现 Connection Manager 维护在线连接池，支持多设备登录</p>
+        <p>JWT 实现 WebSocket 握手鉴权，非法连接在握手阶段关闭（code 4001）</p>
+        <p>消息双端同步 + 好友请求 Content-Type 静默失败 bug 后端热修复（免重装 APK）</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <span class="sec-label">SKILLS</span>
+  <h2 class="sec-title">技术栈</h2>
+  <p class="sec-desc">后端为主，同时覆盖移动端和前端。</p>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h4>后端开发</h4>
+      <div class="techs">
+        <span>Python</span><span>FastAPI</span><span>SQLAlchemy</span>
+        <span>MySQL</span><span>SQLite</span><span>JWT</span>
+        <span>WebSocket</span><span>RESTful API</span><span>SSE</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>移动端</h4>
+      <div class="techs">
+        <span>Flutter</span><span>Dart</span><span>Provider</span>
+        <span>Dio</span><span>Kotlin</span><span>Compose</span>
+        <span>Retrofit</span><span>Coil</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>前端 &amp; 工具</h4>
+      <div class="techs">
+        <span>Vue3</span><span>TypeScript</span><span>Vite</span>
+        <span>Axios</span><span>Git</span><span>Postman</span>
+        <span>Linux Shell</span><span>Gradle</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>AI 辅助</h4>
+      <div class="techs">
+        <span>Claude Code</span><span>AI 编程</span>
+        <span>Prompt 工程</span><span>效率提升 ~60%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <span class="sec-label">CONTACT</span>
+  <div class="contact-box">
+    <h3>保持联系</h3>
+    <p>如果你对我的项目感兴趣，或者有合适的岗位机会，欢迎联系。</p>
+    <div class="contact-links">
+      <a href="mailto:liushuang@email.com">📧 发送邮件</a>
+      <a href="https://github.com/liushuang" target="_blank">🐙 GitHub</a>
+      <a href="F:/刘双_简历_2026.pdf" target="_blank">📄 下载简历</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  刘双 · 2026 · 个人作品集
+</footer>
+
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('nav a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
