@@ -32,7 +32,7 @@
   nav .links a:hover { color: #1e3a5f; }
 
   /* ===== Sections ===== */
-  section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; }
+  section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
   .sec-label {
     display: inline-block;
     background: #e8edf5; color: #1e3a5f;
@@ -51,7 +51,7 @@
   /* ===== Hero ===== */
   .hero {
     min-height: 100vh; display: flex; align-items: center;
-    padding: 100px 40px; max-width: 1100px; margin: 0 auto;
+    padding: 100px 40px; max-width: 1200px; margin: 0 auto;
   }
   .hero-content { max-width: 700px; }
   .hero-greeting {
@@ -76,7 +76,6 @@
     text-decoration: none; display: inline-flex; align-items: center;
     gap: 8px; padding: 12px 28px; border-radius: 10px;
     font-size: 15px; font-weight: 600; transition: all .25s;
-    cursor: pointer; border: none;
   }
   .btn-primary {
     background: #1e3a5f; color: #fff;
@@ -105,28 +104,248 @@
   }
   .about-card li::before { content: "▹"; color: #1e3a5f; font-weight: 700; }
 
-  /* ===== Projects ===== */
-  .projects-grid { display: grid; gap: 32px; }
-  .project-card {
-    background: #fff; border-radius: 16px; padding: 40px;
-    border: 1px solid #e9edf2; transition: transform .25s, box-shadow .25s;
+  /* ===== Project Showcase ===== */
+  .showcase {
+    padding: 100px 40px; max-width: 1200px; margin: 0 auto;
   }
-  .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.06); }
-  .project-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 6px; color: #0f172a; }
-  .project-tags {
-    display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 18px;
+  .showcase-card {
+    background: #fff; border-radius: 20px; padding: 48px;
+    border: 1px solid #e9edf2; margin-bottom: 64px;
+    transition: box-shadow .3s;
   }
-  .project-tags span {
+  .showcase-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,.06); }
+  .showcase-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 32px; flex-wrap: wrap; gap: 16px;
+  }
+  .showcase-title { font-size: 26px; font-weight: 700; color: #0f172a; }
+  .showcase-links { display: flex; gap: 12px; }
+  .showcase-links a {
+    text-decoration: none; font-size: 13px; font-weight: 600;
+    padding: 6px 16px; border-radius: 8px;
+    background: #eef2f8; color: #1e3a5f;
+    transition: background .2s;
+  }
+  .showcase-links a:hover { background: #dce4ef; }
+  .showcase-tags {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+  }
+  .showcase-tags span {
     background: #eef2f8; color: #1e3a5f; font-size: 12px;
     font-weight: 600; padding: 3px 12px; border-radius: 20px;
   }
-  .project-desc { color: #475569; font-size: 15px; margin-bottom: 20px; line-height: 1.7; }
-  .project-work {
-    background: #f8fafc; border-radius: 10px; padding: 20px 24px;
-    border-left: 3px solid #1e3a5f;
+
+  /* ===== Phone Mockup ===== */
+  .phone-wrap {
+    display: flex; gap: 24px; justify-content: center;
+    flex-wrap: wrap; margin: 24px 0;
   }
-  .project-work p { font-size: 14px; color: #334155; padding: 4px 0; display: flex; gap: 8px; }
-  .project-work p::before { content: "→"; color: #1e3a5f; font-weight: 700; flex-shrink: 0; }
+  .phone {
+    width: 248px; height: 500px;
+    background: #1a1a1e; border-radius: 36px;
+    padding: 12px; position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,.15);
+    flex-shrink: 0;
+  }
+  .phone-notch {
+    position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+    width: 120px; height: 24px; background: #1a1a1e;
+    border-radius: 0 0 16px 16px; z-index: 2;
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px;
+  }
+  .phone-notch::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #333; }
+  .phone-notch::after { content: ""; width: 40px; height: 4px; border-radius: 4px; background: #333; }
+  .phone-screen {
+    width: 100%; height: 100%; border-radius: 26px;
+    overflow: hidden; background: #fff; position: relative;
+  }
+  .phone-screen iframe {
+    width: 100%; height: 100%; border: none;
+  }
+
+  /* CSS-drawn app screens for Seen */
+  .seen-screen {
+    width: 100%; height: 100%; display: flex; flex-direction: column;
+    font-size: 11px; color: #1e293b; overflow: hidden;
+  }
+  .seen-topbar {
+    background: linear-gradient(135deg, #1e3a5f, #2a5298);
+    color: #fff; padding: 36px 14px 12px; text-align: center;
+    font-weight: 700; font-size: 14px; position: relative;
+  }
+  .seen-topbar .back { position: absolute; left: 14px; top: 36px; font-size: 16px; }
+  .seen-topbar .more { position: absolute; right: 14px; top: 36px; }
+  .seen-banner {
+    background: linear-gradient(135deg, #1e3a5f, #2a5298);
+    color: #fff; padding: 16px 14px 20px; text-align: center;
+  }
+  .seen-banner h2 { font-size: 18px; margin-bottom: 4px; }
+  .seen-banner p { font-size: 11px; opacity: .8; }
+  .seen-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+    padding: 10px; flex: 1; overflow: hidden;
+  }
+  .seen-card {
+    background: #f1f4f9; border-radius: 8px; padding: 10px 8px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .seen-card .img-placeholder {
+    height: 48px; border-radius: 4px;
+    background: linear-gradient(135deg, #d4e1f0, #a8c0e0);
+  }
+  .seen-card .img-placeholder.g2 { background: linear-gradient(135deg, #f0dfd4, #e0bca8); }
+  .seen-card .img-placeholder.g3 { background: linear-gradient(135deg, #d4f0dd, #a8e0bc); }
+  .seen-card .img-placeholder.g4 { background: linear-gradient(135deg, #e0d4f0, #c0a8e0); }
+  .seen-card .title { font-weight: 600; font-size: 10px; }
+  .seen-card .meta { font-size: 9px; color: #94a3b8; }
+  .seen-statbar {
+    display: flex; justify-content: space-around; padding: 10px;
+    background: #f8fafc; border-top: 1px solid #e9edf2;
+  }
+  .seen-stat { text-align: center; }
+  .seen-stat .num { font-weight: 700; font-size: 14px; }
+  .seen-stat .lbl { font-size: 9px; color: #94a3b8; }
+  .seen-bottombar {
+    display: flex; justify-content: space-around; padding: 8px;
+    border-top: 1px solid #e9edf2; background: #fff;
+    font-size: 9px; color: #94a3b8;
+  }
+  .seen-bottombar .active { color: #1e3a5f; font-weight: 600; }
+
+  /* Seen detail screen */
+  .seen-detail {
+    width: 100%; height: 100%; display: flex; flex-direction: column;
+    font-size: 11px; color: #1e293b;
+  }
+  .seen-detail .hero-img {
+    height: 160px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex; align-items: flex-end; padding: 12px;
+    position: relative;
+  }
+  .seen-detail .hero-img .back { position: absolute; top: 36px; left: 14px; color: #fff; font-size: 18px; }
+  .seen-detail .content { padding: 14px; flex: 1; overflow-y: auto; }
+  .seen-detail .content h3 { font-size: 14px; margin-bottom: 6px; }
+  .seen-detail .content .desc { color: #64748b; font-size: 10px; line-height: 1.5; margin-bottom: 12px; }
+  .seen-detail .stats { display: flex; gap: 16px; font-size: 10px; color: #64748b; }
+  .seen-detail .comments { margin-top: 12px; }
+  .seen-detail .comment { padding: 8px 0; border-top: 1px solid #f1f4f9; display: flex; gap: 8px; }
+  .seen-detail .comment .ava { width: 20px; height: 20px; border-radius: 50%; background: #e2e8f0; flex-shrink: 0; }
+  .seen-detail .comment .name { font-weight: 600; }
+  .seen-detail .comment .txt { color: #64748b; font-size: 10px; }
+
+  /* Seen leaderboard */
+  .seen-rank {
+    width: 100%; height: 100%; display: flex; flex-direction: column;
+    font-size: 11px;
+  }
+  .seen-rank .tabbar {
+    display: flex; padding: 40px 14px 10px; gap: 16px; font-size: 12px;
+    font-weight: 600; color: #94a3b8; border-bottom: 1px solid #e9edf2;
+  }
+  .seen-rank .tabbar .active { color: #1e3a5f; position: relative; }
+  .seen-rank .tabbar .active::after {
+    content: ""; position: absolute; bottom: -10px; left: 0; right: 0;
+    height: 2px; background: #1e3a5f; border-radius: 2px;
+  }
+  .seen-rank .list { flex: 1; padding: 8px 14px; overflow: hidden; }
+  .seen-rank .item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f1f4f9; }
+  .seen-rank .item .num { width: 20px; font-weight: 800; color: #94a3b8; font-size: 13px; }
+  .seen-rank .item .num.top3 { color: #f59e0b; }
+  .seen-rank .item .thumb { width: 32px; height: 32px; border-radius: 6px; background: #e2e8f0; flex-shrink: 0; }
+
+  /* ChatApp mockup */
+  .chat-screen {
+    width: 100%; height: 100%; display: flex; flex-direction: column;
+    font-size: 11px; color: #1e293b; background: #f1f5f9;
+  }
+  .chat-topbar {
+    background: #1e3a5f; color: #fff; padding: 36px 14px 12px;
+    display: flex; align-items: center; gap: 10px; font-weight: 600;
+  }
+  .chat-topbar .back { font-size: 16px; }
+  .chat-topbar .ava {
+    width: 28px; height: 28px; border-radius: 50%; background: #4a7fb5;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: #fff; font-weight: 700;
+  }
+  .chat-topbar .name { flex: 1; }
+  .chat-topbar .more { font-size: 16px; }
+  .chat-messages { flex: 1; padding: 12px; overflow: hidden; display: flex; flex-direction: column; gap: 10px; }
+  .chat-bubble {
+    max-width: 75%; padding: 8px 12px; border-radius: 12px;
+    font-size: 11px; line-height: 1.5; position: relative;
+  }
+  .chat-bubble.mine {
+    align-self: flex-end; background: #1e3a5f; color: #fff;
+    border-bottom-right-radius: 4px;
+  }
+  .chat-bubble.other {
+    align-self: flex-start; background: #fff; color: #1e293b;
+    border-bottom-left-radius: 4px;
+  }
+  .chat-bubble .time { font-size: 8px; opacity: .6; margin-top: 4px; text-align: right; }
+  .chat-image-bubble {
+    max-width: 65%; align-self: flex-end; border-radius: 12px;
+    overflow: hidden;
+  }
+  .chat-image-bubble .img {
+    height: 60px; background: linear-gradient(135deg, #a8c0e0, #c9d6eb);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .chat-inputbar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 12px; background: #fff; border-top: 1px solid #e9edf2;
+  }
+  .chat-inputbar .plus { font-size: 18px; color: #94a3b8; }
+  .chat-inputbar input {
+    flex: 1; border: none; background: #f1f5f9; border-radius: 16px;
+    padding: 8px 14px; font-size: 11px; outline: none;
+  }
+  .chat-inputbar .send { color: #1e3a5f; font-weight: 700; font-size: 12px; }
+
+  /* Chat list screen */
+  .chat-list {
+    width: 100%; height: 100%; display: flex; flex-direction: column;
+    font-size: 11px; background: #fff;
+  }
+  .chat-list .topbar {
+    background: #1e3a5f; color: #fff; padding: 36px 14px 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .chat-list .topbar h3 { flex: 1; font-size: 16px; }
+  .chat-list .item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 14px; border-bottom: 1px solid #f1f4f9;
+  }
+  .chat-list .item .ava {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; color: #fff; flex-shrink: 0;
+  }
+  .chat-list .item .preview { flex: 1; }
+  .chat-list .item .preview .name { font-weight: 600; font-size: 12px; }
+  .chat-list .item .preview .msg { color: #94a3b8; font-size: 10px; white-space: nowrap; overflow: hidden; }
+  .chat-list .item .time { font-size: 9px; color: #94a3b8; text-align: right; }
+
+  /* Moments screen */
+  .moments-screen {
+    width: 100%; height: 100%; display: flex; flex-direction: column;
+    font-size: 11px; background: #fff; overflow: hidden;
+  }
+  .moments-screen .topbar {
+    background: #1e3a5f; color: #fff; padding: 36px 14px 12px;
+    font-size: 16px; font-weight: 700;
+  }
+  .moments-screen .post { padding: 14px; border-bottom: 1px solid #f1f4f9; }
+  .moments-screen .post .head { display: flex; gap: 10px; margin-bottom: 8px; }
+  .moments-screen .post .head .ava { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; }
+  .moments-screen .post .head .name { font-weight: 600; font-size: 12px; }
+  .moments-screen .post .txt { color: #475569; margin-bottom: 8px; font-size: 11px; }
+  .moments-screen .post .imgs { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; }
+  .moments-screen .post .imgs .i { height: 40px; border-radius: 4px; background: #e2e8f0; }
 
   /* ===== Skills ===== */
   .skills-grid {
@@ -166,18 +385,21 @@
 
   /* ===== Responsive ===== */
   @media (max-width: 768px) {
-    section { padding: 64px 24px; }
+    section, .showcase { padding: 64px 24px; }
     .hero { padding: 100px 24px; }
     nav { padding: 0 20px; }
     nav .links { gap: 16px; }
     .about-grid { grid-template-columns: 1fr; }
+    .showcase-card { padding: 28px; }
+    .showcase-header { flex-direction: column; }
+    .phone { width: 200px; height: 412px; padding: 8px; border-radius: 28px; }
+    .phone-screen { border-radius: 20px; }
     .contact-box { padding: 32px 24px; }
   }
 </style>
 </head>
 <body>
 
-<!-- Nav -->
 <nav>
   <div class="logo">刘双</div>
   <div class="links">
@@ -229,51 +451,303 @@
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects">
+<!-- Project Showcases -->
+<div class="showcase" id="projects">
   <span class="sec-label">PROJECTS</span>
-  <h2 class="sec-title">项目经历</h2>
-  <p class="sec-desc">两个独立完成的完整项目，覆盖后端 + 移动端 + Web 端。</p>
-  <div class="projects-grid">
+  <h2 class="sec-title">项目展示</h2>
+  <p class="sec-desc">点击每个项目底部的 GitHub 链接可以查看完整源码。</p>
 
-    <!-- Seen -->
-    <div class="project-card">
-      <h3>Seen 个人展馆平台</h3>
-      <div class="project-tags">
-        <span>FastAPI</span><span>MySQL</span><span>Vue3/TS</span>
-        <span>Kotlin/Compose</span><span>JWT</span>
+  <!-- ===== Seen ===== -->
+  <div class="showcase-card">
+    <div class="showcase-header">
+      <div>
+        <div class="showcase-title">Seen 个人展馆平台</div>
+        <div class="showcase-tags">
+          <span>FastAPI</span><span>MySQL</span><span>Vue3/TS</span>
+          <span>Kotlin/Compose</span><span>JWT</span>
+        </div>
       </div>
-      <div class="project-desc">
-        面向创作者的个人作品线上展馆：作品展示、分区管理、点赞评论收藏互动、数据看板排行榜。Web 端 + 原生 Android APP 双端覆盖，15 天从 0 到 1 交付。
-      </div>
-      <div class="project-work">
-        <p>基于 Python FastAPI + SQLAlchemy ORM 设计 RESTful API，8 个路由模块、7 张数据库表</p>
-        <p>利用 Kotlin + Jetpack Compose 开发原生 Android APP 8 个页面，功能与 Web 端对齐</p>
-        <p>通过 ContentResolver + Retrofit Multipart 解决 Android 图片上传全链路兼容性问题</p>
-        <p>修复收藏列表类型不匹配崩溃，崩溃率 100% → 0%；Gzip 压缩 JS 体积降 62%</p>
+      <div class="showcase-links">
+        <a href="https://github.com/TWOS21/Seen" target="_blank">🐙 GitHub</a>
       </div>
     </div>
 
-    <!-- ChatApp -->
-    <div class="project-card">
-      <h3>ChatApp 即时通讯</h3>
-      <div class="project-tags">
-        <span>FastAPI</span><span>WebSocket</span><span>Flutter/Dart</span>
-        <span>SQLite</span><span>Provider</span>
+    <p style="color:#64748b;margin-bottom:24px;">
+      面向创作者的个人作品展馆。支持作品管理、分区分类、点赞评论收藏互动、数据看板、周月排行榜。
+      Web 端 + 原生 Android APP 双端覆盖，15 天从 0 到 1 交付。
+    </p>
+
+    <!-- Phone mockups -->
+    <div style="text-align:center;margin-bottom:16px;color:#94a3b8;font-size:13px;font-weight:600;">
+      ← 左右滑动 →
+    </div>
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="seen-screen">
+            <div class="seen-topbar">
+              <span class="back">‹</span>
+              我的展馆
+              <span class="more">⋯</span>
+            </div>
+            <div class="seen-banner">
+              <h2>刘双的作品集</h2>
+              <p>12 件作品 · 2 个分区</p>
+            </div>
+            <div class="seen-grid">
+              <div class="seen-card">
+                <div class="img-placeholder"></div>
+                <div class="title">光影之间</div>
+                <div class="meta">❤ 24</div>
+              </div>
+              <div class="seen-card">
+                <div class="img-placeholder g2"></div>
+                <div class="title">城市记忆</div>
+                <div class="meta">❤ 18</div>
+              </div>
+              <div class="seen-card">
+                <div class="img-placeholder g3"></div>
+                <div class="title">自然物语</div>
+                <div class="meta">❤ 32</div>
+              </div>
+              <div class="seen-card">
+                <div class="img-placeholder g4"></div>
+                <div class="title">抽象派</div>
+                <div class="meta">❤ 15</div>
+              </div>
+            </div>
+            <div class="seen-bottombar">
+              <span class="active">🏠 首页</span>
+              <span>📊 排行</span>
+              <span>📋 看板</span>
+              <span>👤 我的</span>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">主页 · 作品流</div>
       </div>
-      <div class="project-desc">
-        对标微信核心功能的即时通讯软件：文字/图片/语音/视频聊天、好友系统、朋友圈。REST + WebSocket 双通道架构，APK 真机运行通过。
+
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="seen-detail">
+            <div class="hero-img">
+              <span class="back">‹</span>
+              <span style="color:#fff;font-weight:600;">光影之间</span>
+            </div>
+            <div class="content">
+              <h3>光影之间</h3>
+              <div class="desc">
+                用镜头记录城市中每一个被光眷顾的角落。这组作品拍摄于上海老城区，捕捉了午后阳光穿过弄堂的瞬间。
+              </div>
+              <div class="stats">
+                <span>❤ 24</span>
+                <span>💬 6</span>
+                <span>⭐ 12</span>
+                <span>👁 156</span>
+              </div>
+              <div class="comments">
+                <div class="comment">
+                  <div class="ava"></div>
+                  <div><span class="name">小艺</span><div class="txt">这张光影太绝了！</div></div>
+                </div>
+                <div class="comment">
+                  <div class="ava"></div>
+                  <div><span class="name">阿明</span><div class="txt">构图很舒服</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">作品详情 · 互动</div>
       </div>
-      <div class="project-work">
-        <p>基于 FastAPI 设计 REST + WebSocket 双通道架构，6 个路由模块</p>
-        <p>自实现 Connection Manager 维护在线连接池，支持多设备登录</p>
-        <p>JWT 实现 WebSocket 握手鉴权，非法连接在握手阶段关闭（code 4001）</p>
-        <p>消息双端同步 + 好友请求 Content-Type 静默失败 bug 后端热修复（免重装 APK）</p>
+
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="seen-rank">
+            <div class="tabbar">
+              <span class="active">本周</span>
+              <span>本月</span>
+            </div>
+            <div class="list">
+              <div class="item"><span class="num top3">1</span><div class="thumb"></div><div><b>光影之间</b><br><span style="color:#94a3b8;">👁 156</span></div></div>
+              <div class="item"><span class="num top3">2</span><div class="thumb g2"></div><div><b>自然物语</b><br><span style="color:#94a3b8;">👁 132</span></div></div>
+              <div class="item"><span class="num top3">3</span><div class="thumb g3"></div><div><b>城市记忆</b><br><span style="color:#94a3b8;">👁 98</span></div></div>
+              <div class="item"><span class="num">4</span><div class="thumb g4"></div><div><b>抽象派</b><br><span style="color:#94a3b8;">👁 67</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">排行榜 · 周/月</div>
       </div>
     </div>
 
+    <details style="margin-top:20px;cursor:pointer;">
+      <summary style="font-weight:600;color:#1e3a5f;font-size:14px;">👷 主要工作（点击展开）</summary>
+      <div style="padding:16px 0 0 16px;color:#475569;font-size:14px;line-height:1.8;">
+        • 基于 Python FastAPI + SQLAlchemy ORM 设计 RESTful API 后端，8 个路由模块、7 张数据库表<br>
+        • 利用 Kotlin + Jetpack Compose 开发原生 Android APP 8 个页面（Navigation Compose + ViewModel + Retrofit + Coil）<br>
+        • 通过 ContentResolver + Retrofit Multipart 实现 Android 端图片上传全链路，8+ 机型验证通过<br>
+        • 修复收藏列表因后端 int 与 Kotlin Long 类型不一致导致的运行时崩溃，崩溃率归零<br>
+        • 采用 JWT + bcrypt 无状态鉴权；前端 Gzip 压缩 JS 从 139KB 降至 53KB（降幅 62%）<br>
+        • 实现数据看板统计、周月排行榜、访问趋势分析等数据可视化功能
+      </div>
+    </details>
   </div>
-</section>
+
+  <!-- ===== ChatApp ===== -->
+  <div class="showcase-card">
+    <div class="showcase-header">
+      <div>
+        <div class="showcase-title">ChatApp 即时通讯</div>
+        <div class="showcase-tags">
+          <span>FastAPI</span><span>WebSocket</span><span>Flutter/Dart</span>
+          <span>SQLite</span><span>Provider</span>
+        </div>
+      </div>
+      <div class="showcase-links">
+        <a href="https://github.com/TWOS21/ChatApp" target="_blank">🐙 GitHub</a>
+      </div>
+    </div>
+
+    <p style="color:#64748b;margin-bottom:24px;">
+      对标微信核心功能的即时通讯软件。实时文字/图片/语音/视频聊天、好友系统、朋友圈动态。
+      REST + WebSocket 双通道架构，APK 真机运行通过。
+    </p>
+
+    <div style="text-align:center;margin-bottom:16px;color:#94a3b8;font-size:13px;font-weight:600;">
+      ← 左右滑动 →
+    </div>
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="chat-list">
+            <div class="topbar">
+              <h3>消息</h3>
+              <span>✚</span>
+            </div>
+            <div class="item">
+              <div class="ava" style="background:#4a7fb5;">小</div>
+              <div class="preview"><div class="name">小艺</div><div class="msg">好的，下午见！</div></div>
+              <div class="time">10:32</div>
+            </div>
+            <div class="item">
+              <div class="ava" style="background:#e67e22;">阿</div>
+              <div class="preview"><div class="name">阿明</div><div class="msg">你发的图片我看了</div></div>
+              <div class="time">09:15</div>
+            </div>
+            <div class="item">
+              <div class="ava" style="background:#2ecc71;">大</div>
+              <div class="preview"><div class="name">大学群</div><div class="msg">有人周末去打球吗</div></div>
+              <div class="time">昨天</div>
+            </div>
+            <div class="item">
+              <div class="ava" style="background:#9b59b6;">家</div>
+              <div class="preview"><div class="name">家人群</div><div class="msg">[图片]</div></div>
+              <div class="time">昨天</div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">会话列表</div>
+      </div>
+
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="chat-screen">
+            <div class="chat-topbar">
+              <span class="back">‹</span>
+              <div class="ava">小</div>
+              <span class="name">小艺</span>
+              <span class="more">⋯</span>
+            </div>
+            <div class="chat-messages">
+              <div class="chat-bubble other">
+                在吗？
+                <div class="time">10:15</div>
+              </div>
+              <div class="chat-bubble mine">
+                在呢
+                <div class="time">10:16</div>
+              </div>
+              <div class="chat-bubble other">
+                下午有空吗？想去看那个新展
+                <div class="time">10:18</div>
+              </div>
+              <div class="chat-bubble mine">
+                好啊几点
+                <div class="time">10:20</div>
+              </div>
+              <div class="chat-bubble other">
+                三点？
+                <div class="time">10:22</div>
+              </div>
+              <div class="chat-image-bubble">
+                <div class="img">🖼️</div>
+                <div style="padding:6px 10px;background:#fff;font-size:10px;color:#475569;">
+                  好的，下午见！<br><span style="color:#94a3b8;">10:32</span>
+                </div>
+              </div>
+            </div>
+            <div class="chat-inputbar">
+              <span class="plus">⊕</span>
+              <input placeholder="输入消息...">
+              <span class="send">发送</span>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">实时聊天</div>
+      </div>
+
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="moments-screen">
+            <div class="topbar">朋友圈</div>
+            <div class="post">
+              <div class="head">
+                <div class="ava" style="background:#4a7fb5;"></div>
+                <div><div class="name">小艺</div><div style="font-size:9px;color:#94a3b8;">10分钟前</div></div>
+              </div>
+              <div class="txt">今天的夕阳太美了🌅</div>
+              <div class="imgs">
+                <div class="i" style="background:linear-gradient(135deg,#f7c948,#f59e0b);"></div>
+                <div class="i" style="background:linear-gradient(135deg,#f59e0b,#ef7a3a);"></div>
+                <div class="i" style="background:linear-gradient(135deg,#ef7a3a,#e04f3d);"></div>
+              </div>
+            </div>
+            <div class="post">
+              <div class="head">
+                <div class="ava" style="background:#2ecc71;"></div>
+                <div><div class="name">阿明</div><div style="font-size:9px;color:#94a3b8;">昨天</div></div>
+              </div>
+              <div class="txt">新学的菜，味道不错！</div>
+              <div class="imgs">
+                <div class="i" style="background:linear-gradient(135deg,#a8e0bc,#7bc99a);"></div>
+                <div class="i" style="background:linear-gradient(135deg,#7bc99a,#4fb081);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">朋友圈</div>
+      </div>
+    </div>
+
+    <details style="margin-top:20px;cursor:pointer;">
+      <summary style="font-weight:600;color:#1e3a5f;font-size:14px;">👷 主要工作（点击展开）</summary>
+      <div style="padding:16px 0 0 16px;color:#475569;font-size:14px;line-height:1.8;">
+        • 基于 FastAPI 设计 REST + WebSocket 双通道架构，6 个路由模块<br>
+        • 利用自实现 Connection Manager（user_id → WebSocket[] 连接池）管理在线用户，支持多设备登录<br>
+        • 通过 URL query 传 JWT 实现 WebSocket 握手鉴权，非法连接在握手阶段关闭（code 4001）<br>
+        • 实现消息双端同步：写库后同时推送给接收方和发送方自身<br>
+        • 基于 Flutter + Provider 开发 10 个页面的聊天 APP（Dio + web_socket_channel + image_picker），APK 真机运行<br>
+        • 修复好友请求因 Content-Type 不一致导致的静默失败 bug，后端热修复免重装 APK
+      </div>
+    </details>
+  </div>
+</div>
 
 <!-- Skills -->
 <section id="skills">
@@ -322,9 +796,9 @@
     <h3>保持联系</h3>
     <p>如果你对我的项目感兴趣，或者有合适的岗位机会，欢迎联系。</p>
     <div class="contact-links">
-      <a href="mailto:liushuang@email.com">📧 发送邮件</a>
-      <a href="https://github.com/liushuang" target="_blank">🐙 GitHub</a>
-      <a href="F:/刘双_简历_2026.pdf" target="_blank">📄 下载简历</a>
+      <a href="mailto:2634116101@qq.com">📧 发送邮件</a>
+      <a href="https://github.com/TWOS21" target="_blank">🐙 GitHub</a>
+      <a href="F:/刘双_简历_v5.pdf" target="_blank">📄 下载简历</a>
     </div>
   </div>
 </section>
@@ -334,12 +808,10 @@
 </footer>
 
 <script>
-  // Smooth scroll for nav links
   document.querySelectorAll('nav a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
     });
   });
 </script>
