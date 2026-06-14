@@ -5,397 +5,174 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>刘双 · 个人作品集</title>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-                 "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
-    color: #1e293b;
-    background: #f8fafc;
-    line-height: 1.6;
-  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;color:#1e293b;background:#f8fafc;line-height:1.6}
 
-  /* ===== Nav ===== */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(255,255,255,.85); backdrop-filter: blur(12px);
-    border-bottom: 1px solid #e9edf2;
-    padding: 0 40px; height: 56px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  nav .logo { font-weight: 700; font-size: 18px; color: #1e3a5f; }
-  nav .links { display: flex; gap: 28px; }
-  nav .links a {
-    text-decoration: none; color: #475569; font-size: 14px;
-    font-weight: 500; transition: color .2s;
-  }
-  nav .links a:hover { color: #1e3a5f; }
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid #e9edf2;padding:0 40px;height:56px;display:flex;align-items:center;justify-content:space-between}
+  nav .logo{font-weight:700;font-size:18px;color:#1e3a5f}
+  nav .links{display:flex;gap:28px}
+  nav .links a{text-decoration:none;color:#475569;font-size:14px;font-weight:500;transition:color .2s}
+  nav .links a:hover{color:#1e3a5f}
 
-  /* ===== Sections ===== */
-  section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
-  .sec-label {
-    display: inline-block;
-    background: #e8edf5; color: #1e3a5f;
-    font-size: 12px; font-weight: 600; letter-spacing: 1px;
-    padding: 4px 14px; border-radius: 20px; margin-bottom: 20px;
-  }
-  .sec-title {
-    font-size: 32px; font-weight: 700; color: #0f172a;
-    margin-bottom: 16px;
-  }
-  .sec-desc {
-    font-size: 16px; color: #64748b; max-width: 600px;
-    margin-bottom: 48px;
-  }
+  section{padding:100px 40px;max-width:1200px;margin:0 auto}
+  .sec-label{display:inline-block;background:#e8edf5;color:#1e3a5f;font-size:12px;font-weight:600;letter-spacing:1px;padding:4px 14px;border-radius:20px;margin-bottom:20px}
+  .sec-title{font-size:32px;font-weight:700;color:#0f172a;margin-bottom:16px}
+  .sec-desc{font-size:16px;color:#64748b;max-width:600px;margin-bottom:48px}
 
-  /* ===== Hero ===== */
-  .hero {
-    min-height: 100vh; display: flex; align-items: center;
-    padding: 100px 40px; max-width: 1200px; margin: 0 auto;
-  }
-  .hero-content { max-width: 700px; }
-  .hero-greeting {
-    font-size: 15px; color: #1e3a5f; font-weight: 600;
-    margin-bottom: 12px; letter-spacing: 1px;
-  }
-  .hero h1 {
-    font-size: clamp(40px, 7vw, 64px); font-weight: 800;
-    color: #0f172a; line-height: 1.15; margin-bottom: 12px;
-  }
-  .hero h1 span { color: #1e3a5f; }
-  .hero-sub {
-    font-size: 20px; color: #475569; font-weight: 500;
-    margin-bottom: 24px;
-  }
-  .hero p {
-    font-size: 17px; color: #64748b; max-width: 560px;
-    margin-bottom: 36px;
-  }
-  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn {
-    text-decoration: none; display: inline-flex; align-items: center;
-    gap: 8px; padding: 12px 28px; border-radius: 10px;
-    font-size: 15px; font-weight: 600; transition: all .25s;
-  }
-  .btn-primary {
-    background: #1e3a5f; color: #fff;
-  }
-  .btn-primary:hover { background: #152d4a; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(30,58,95,.25); }
-  .btn-outline {
-    background: transparent; color: #1e3a5f;
-    border: 2px solid #d0d8e5;
-  }
-  .btn-outline:hover { border-color: #1e3a5f; transform: translateY(-2px); }
+  .hero{min-height:100vh;display:flex;align-items:center;padding:100px 40px;max-width:1200px;margin:0 auto}
+  .hero-content{max-width:700px}
+  .hero-greeting{font-size:15px;color:#1e3a5f;font-weight:600;margin-bottom:12px;letter-spacing:1px}
+  .hero h1{font-size:clamp(40px,7vw,64px);font-weight:800;color:#0f172a;line-height:1.15;margin-bottom:12px}
+  .hero h1 span{color:#1e3a5f}
+  .hero-sub{font-size:20px;color:#475569;font-weight:500;margin-bottom:24px}
+  .hero p{font-size:17px;color:#64748b;max-width:560px;margin-bottom:36px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;transition:all .25s}
+  .btn-primary{background:#1e3a5f;color:#fff}
+  .btn-primary:hover{background:#152d4a;transform:translateY(-2px);box-shadow:0 8px 25px rgba(30,58,95,.25)}
+  .btn-outline{background:transparent;color:#1e3a5f;border:2px solid #d0d8e5}
+  .btn-outline:hover{border-color:#1e3a5f;transform:translateY(-2px)}
 
-  /* ===== About ===== */
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-  }
-  .about-card {
-    background: #fff; border-radius: 16px; padding: 36px;
-    border: 1px solid #e9edf2; transition: transform .25s, box-shadow .25s;
-  }
-  .about-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.06); }
-  .about-card h3 { font-size: 18px; margin-bottom: 16px; color: #0f172a; }
-  .about-card ul { list-style: none; }
-  .about-card li {
-    padding: 6px 0; color: #475569; font-size: 15px;
-    display: flex; gap: 10px;
-  }
-  .about-card li::before { content: "▹"; color: #1e3a5f; font-weight: 700; }
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .about-card{background:#fff;border-radius:16px;padding:36px;border:1px solid #e9edf2;transition:transform .25s,box-shadow .25s}
+  .about-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.06)}
+  .about-card h3{font-size:18px;margin-bottom:16px;color:#0f172a}
+  .about-card ul{list-style:none}
+  .about-card li{padding:6px 0;color:#475569;font-size:15px;display:flex;gap:10px}
+  .about-card li::before{content:"▹";color:#1e3a5f;font-weight:700}
 
-  /* ===== Project Showcase ===== */
-  .showcase {
-    padding: 100px 40px; max-width: 1200px; margin: 0 auto;
-  }
-  .showcase-card {
-    background: #fff; border-radius: 20px; padding: 48px;
-    border: 1px solid #e9edf2; margin-bottom: 64px;
-    transition: box-shadow .3s;
-  }
-  .showcase-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,.06); }
-  .showcase-header {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    margin-bottom: 32px; flex-wrap: wrap; gap: 16px;
-  }
-  .showcase-title { font-size: 26px; font-weight: 700; color: #0f172a; }
-  .showcase-links { display: flex; gap: 12px; }
-  .showcase-links a {
-    text-decoration: none; font-size: 13px; font-weight: 600;
-    padding: 6px 16px; border-radius: 8px;
-    background: #eef2f8; color: #1e3a5f;
-    transition: background .2s;
-  }
-  .showcase-links a:hover { background: #dce4ef; }
-  .showcase-tags {
-    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
-  }
-  .showcase-tags span {
-    background: #eef2f8; color: #1e3a5f; font-size: 12px;
-    font-weight: 600; padding: 3px 12px; border-radius: 20px;
-  }
+  .showcase{padding:100px 40px;max-width:1200px;margin:0 auto}
+  .showcase-card{background:#fff;border-radius:20px;padding:48px;border:1px solid #e9edf2;margin-bottom:64px;transition:box-shadow .3s}
+  .showcase-card:hover{box-shadow:0 16px 48px rgba(0,0,0,.06)}
+  .showcase-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px;flex-wrap:wrap;gap:16px}
+  .showcase-title{font-size:26px;font-weight:700;color:#0f172a}
+  .showcase-links{display:flex;gap:12px}
+  .showcase-links a{text-decoration:none;font-size:13px;font-weight:600;padding:6px 16px;border-radius:8px;background:#eef2f8;color:#1e3a5f;transition:background .2s}
+  .showcase-links a:hover{background:#dce4ef}
+  .showcase-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+  .showcase-tags span{background:#eef2f8;color:#1e3a5f;font-size:12px;font-weight:600;padding:3px 12px;border-radius:20px}
 
-  /* ===== Phone Mockup ===== */
-  .phone-wrap {
-    display: flex; gap: 24px; justify-content: center;
-    flex-wrap: wrap; margin: 24px 0;
-  }
-  .phone {
-    width: 248px; height: 500px;
-    background: #1a1a1e; border-radius: 36px;
-    padding: 12px; position: relative;
-    box-shadow: 0 20px 60px rgba(0,0,0,.15);
-    flex-shrink: 0;
-  }
-  .phone-notch {
-    position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
-    width: 120px; height: 24px; background: #1a1a1e;
-    border-radius: 0 0 16px 16px; z-index: 2;
-    display: flex; align-items: center; justify-content: center;
-    gap: 6px;
-  }
-  .phone-notch::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #333; }
-  .phone-notch::after { content: ""; width: 40px; height: 4px; border-radius: 4px; background: #333; }
-  .phone-screen {
-    width: 100%; height: 100%; border-radius: 26px;
-    overflow: hidden; background: #fff; position: relative;
-  }
-  .phone-screen iframe {
-    width: 100%; height: 100%; border: none;
-  }
+  /* ===== Phone Carousel ===== */
+  .phone{width:248px;height:500px;background:#1a1a1e;border-radius:36px;padding:12px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.15);flex-shrink:0}
+  .phone-notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:120px;height:24px;background:#1a1a1e;border-radius:0 0 16px 16px;z-index:10;display:flex;align-items:center;justify-content:center;gap:6px}
+  .phone-notch::before{content:"";width:8px;height:8px;border-radius:50%;background:#333}
+  .phone-notch::after{content:"";width:40px;height:4px;border-radius:4px;background:#333}
+  .phone-screen{width:100%;height:100%;border-radius:26px;overflow:hidden;background:#fff;position:relative}
 
-  /* CSS-drawn app screens for Seen */
-  .seen-screen {
-    width: 100%; height: 100%; display: flex; flex-direction: column;
-    font-size: 11px; color: #1e293b; overflow: hidden;
-  }
-  .seen-topbar {
-    background: linear-gradient(135deg, #1e3a5f, #2a5298);
-    color: #fff; padding: 36px 14px 12px; text-align: center;
-    font-weight: 700; font-size: 14px; position: relative;
-  }
-  .seen-topbar .back { position: absolute; left: 14px; top: 36px; font-size: 16px; }
-  .seen-topbar .more { position: absolute; right: 14px; top: 36px; }
-  .seen-banner {
-    background: linear-gradient(135deg, #1e3a5f, #2a5298);
-    color: #fff; padding: 16px 14px 20px; text-align: center;
-  }
-  .seen-banner h2 { font-size: 18px; margin-bottom: 4px; }
-  .seen-banner p { font-size: 11px; opacity: .8; }
-  .seen-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
-    padding: 10px; flex: 1; overflow: hidden;
-  }
-  .seen-card {
-    background: #f1f4f9; border-radius: 8px; padding: 10px 8px;
-    display: flex; flex-direction: column; gap: 4px;
-  }
-  .seen-card .img-placeholder {
-    height: 48px; border-radius: 4px;
-    background: linear-gradient(135deg, #d4e1f0, #a8c0e0);
-  }
-  .seen-card .img-placeholder.g2 { background: linear-gradient(135deg, #f0dfd4, #e0bca8); }
-  .seen-card .img-placeholder.g3 { background: linear-gradient(135deg, #d4f0dd, #a8e0bc); }
-  .seen-card .img-placeholder.g4 { background: linear-gradient(135deg, #e0d4f0, #c0a8e0); }
-  .seen-card .title { font-weight: 600; font-size: 10px; }
-  .seen-card .meta { font-size: 9px; color: #94a3b8; }
-  .seen-statbar {
-    display: flex; justify-content: space-around; padding: 10px;
-    background: #f8fafc; border-top: 1px solid #e9edf2;
-  }
-  .seen-stat { text-align: center; }
-  .seen-stat .num { font-weight: 700; font-size: 14px; }
-  .seen-stat .lbl { font-size: 9px; color: #94a3b8; }
-  .seen-bottombar {
-    display: flex; justify-content: space-around; padding: 8px;
-    border-top: 1px solid #e9edf2; background: #fff;
-    font-size: 9px; color: #94a3b8;
-  }
-  .seen-bottombar .active { color: #1e3a5f; font-weight: 600; }
+  /* ===== Carousel engine ===== */
+  .carousel{position:relative;width:100%;height:100%;overflow:hidden}
+  .carousel-track{display:flex;height:100%;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+  .carousel-slide{min-width:100%;height:100%;overflow:hidden;flex-shrink:0}
+  .carousel-dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:5}
+  .carousel-dots span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);transition:all .3s;cursor:pointer}
+  .carousel-dots span.active{background:#fff;width:18px;border-radius:3px}
 
-  /* Seen detail screen */
-  .seen-detail {
-    width: 100%; height: 100%; display: flex; flex-direction: column;
-    font-size: 11px; color: #1e293b;
-  }
-  .seen-detail .hero-img {
-    height: 160px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    display: flex; align-items: flex-end; padding: 12px;
-    position: relative;
-  }
-  .seen-detail .hero-img .back { position: absolute; top: 36px; left: 14px; color: #fff; font-size: 18px; }
-  .seen-detail .content { padding: 14px; flex: 1; overflow-y: auto; }
-  .seen-detail .content h3 { font-size: 14px; margin-bottom: 6px; }
-  .seen-detail .content .desc { color: #64748b; font-size: 10px; line-height: 1.5; margin-bottom: 12px; }
-  .seen-detail .stats { display: flex; gap: 16px; font-size: 10px; color: #64748b; }
-  .seen-detail .comments { margin-top: 12px; }
-  .seen-detail .comment { padding: 8px 0; border-top: 1px solid #f1f4f9; display: flex; gap: 8px; }
-  .seen-detail .comment .ava { width: 20px; height: 20px; border-radius: 50%; background: #e2e8f0; flex-shrink: 0; }
-  .seen-detail .comment .name { font-weight: 600; }
-  .seen-detail .comment .txt { color: #64748b; font-size: 10px; }
+  /* ===== Seen screens ===== */
+  .s-top{background:linear-gradient(135deg,#1e3a5f,#2a5298);color:#fff;padding:36px 14px 12px;text-align:center;font-weight:700;font-size:14px}
+  .s-banner{background:linear-gradient(135deg,#1e3a5f,#2a5298);color:#fff;padding:16px 14px 20px;text-align:center}
+  .s-banner h2{font-size:18px;margin-bottom:4px}
+  .s-banner p{font-size:11px;opacity:.8}
+  .s-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px;flex:1}
+  .s-card{background:#f1f4f9;border-radius:8px;padding:10px 8px}
+  .s-card .im{height:48px;border-radius:4px;background:linear-gradient(135deg,#d4e1f0,#a8c0e0);margin-bottom:4px}
+  .s-card .im.g2{background:linear-gradient(135deg,#f0dfd4,#e0bca8)}
+  .s-card .im.g3{background:linear-gradient(135deg,#d4f0dd,#a8e0bc)}
+  .s-card .im.g4{background:linear-gradient(135deg,#e0d4f0,#c0a8e0)}
+  .s-card .ti{font-weight:600;font-size:10px}
+  .s-card .me{font-size:9px;color:#94a3b8}
+  .s-bot{display:flex;justify-content:space-around;padding:10px;background:#f8fafc;border-top:1px solid #e9edf2}
+  .s-bot div{text-align:center}
+  .s-bot .n{font-weight:700;font-size:14px}
+  .s-bot .l{font-size:9px;color:#94a3b8}
+  .s-nav{display:flex;justify-content:space-around;padding:8px;border-top:1px solid #e9edf2;font-size:9px;color:#94a3b8}
+  .s-nav .on{color:#1e3a5f;font-weight:600}
 
-  /* Seen leaderboard */
-  .seen-rank {
-    width: 100%; height: 100%; display: flex; flex-direction: column;
-    font-size: 11px;
-  }
-  .seen-rank .tabbar {
-    display: flex; padding: 40px 14px 10px; gap: 16px; font-size: 12px;
-    font-weight: 600; color: #94a3b8; border-bottom: 1px solid #e9edf2;
-  }
-  .seen-rank .tabbar .active { color: #1e3a5f; position: relative; }
-  .seen-rank .tabbar .active::after {
-    content: ""; position: absolute; bottom: -10px; left: 0; right: 0;
-    height: 2px; background: #1e3a5f; border-radius: 2px;
-  }
-  .seen-rank .list { flex: 1; padding: 8px 14px; overflow: hidden; }
-  .seen-rank .item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f1f4f9; }
-  .seen-rank .item .num { width: 20px; font-weight: 800; color: #94a3b8; font-size: 13px; }
-  .seen-rank .item .num.top3 { color: #f59e0b; }
-  .seen-rank .item .thumb { width: 32px; height: 32px; border-radius: 6px; background: #e2e8f0; flex-shrink: 0; }
+  /* detail */
+  .sd-hero{height:140px;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:flex-end;padding:12px;position:relative}
+  .sd-hero .t{color:#fff;font-weight:600;font-size:13px}
+  .sd-c{padding:12px;font-size:10px}
+  .sd-c h4{font-size:13px;margin-bottom:4px}
+  .sd-c .d{color:#64748b;font-size:9.5px;line-height:1.5;margin-bottom:8px}
+  .sd-c .st{display:flex;gap:12px;font-size:9px;color:#64748b;margin-bottom:8px}
+  .sd-c .cm{font-size:9px}
+  .sd-c .cm .i{padding:6px 0;border-top:1px solid #f1f4f9;display:flex;gap:6px}
+  .sd-c .cm .i .av{width:16px;height:16px;border-radius:50%;background:#e2e8f0;flex-shrink:0}
+  .sd-c .cm .i .nm{font-weight:600}
+  .sd-c .cm .i .tx{color:#64748b}
 
-  /* ChatApp mockup */
-  .chat-screen {
-    width: 100%; height: 100%; display: flex; flex-direction: column;
-    font-size: 11px; color: #1e293b; background: #f1f5f9;
-  }
-  .chat-topbar {
-    background: #1e3a5f; color: #fff; padding: 36px 14px 12px;
-    display: flex; align-items: center; gap: 10px; font-weight: 600;
-  }
-  .chat-topbar .back { font-size: 16px; }
-  .chat-topbar .ava {
-    width: 28px; height: 28px; border-radius: 50%; background: #4a7fb5;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 12px; color: #fff; font-weight: 700;
-  }
-  .chat-topbar .name { flex: 1; }
-  .chat-topbar .more { font-size: 16px; }
-  .chat-messages { flex: 1; padding: 12px; overflow: hidden; display: flex; flex-direction: column; gap: 10px; }
-  .chat-bubble {
-    max-width: 75%; padding: 8px 12px; border-radius: 12px;
-    font-size: 11px; line-height: 1.5; position: relative;
-  }
-  .chat-bubble.mine {
-    align-self: flex-end; background: #1e3a5f; color: #fff;
-    border-bottom-right-radius: 4px;
-  }
-  .chat-bubble.other {
-    align-self: flex-start; background: #fff; color: #1e293b;
-    border-bottom-left-radius: 4px;
-  }
-  .chat-bubble .time { font-size: 8px; opacity: .6; margin-top: 4px; text-align: right; }
-  .chat-image-bubble {
-    max-width: 65%; align-self: flex-end; border-radius: 12px;
-    overflow: hidden;
-  }
-  .chat-image-bubble .img {
-    height: 60px; background: linear-gradient(135deg, #a8c0e0, #c9d6eb);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px;
-  }
-  .chat-inputbar {
-    display: flex; align-items: center; gap: 8px;
-    padding: 8px 12px; background: #fff; border-top: 1px solid #e9edf2;
-  }
-  .chat-inputbar .plus { font-size: 18px; color: #94a3b8; }
-  .chat-inputbar input {
-    flex: 1; border: none; background: #f1f5f9; border-radius: 16px;
-    padding: 8px 14px; font-size: 11px; outline: none;
-  }
-  .chat-inputbar .send { color: #1e3a5f; font-weight: 700; font-size: 12px; }
+  /* rank */
+  .sr-t{display:flex;padding:36px 14px 10px;gap:16px;font-size:11px;font-weight:600;color:#94a3b8;border-bottom:1px solid #e9edf2}
+  .sr-t .on{color:#1e3a5f}
+  .sr-l{padding:8px 14px}
+  .sr-l .i{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #f1f4f9;font-size:10px}
+  .sr-l .i .nu{width:18px;font-weight:800;color:#94a3b8}
+  .sr-l .i .nu.t{color:#f59e0b}
+  .sr-l .i .th{width:28px;height:28px;border-radius:4px;background:#e2e8f0;flex-shrink:0}
 
-  /* Chat list screen */
-  .chat-list {
-    width: 100%; height: 100%; display: flex; flex-direction: column;
-    font-size: 11px; background: #fff;
-  }
-  .chat-list .topbar {
-    background: #1e3a5f; color: #fff; padding: 36px 14px 12px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .chat-list .topbar h3 { flex: 1; font-size: 16px; }
-  .chat-list .item {
-    display: flex; align-items: center; gap: 10px;
-    padding: 12px 14px; border-bottom: 1px solid #f1f4f9;
-  }
-  .chat-list .item .ava {
-    width: 36px; height: 36px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; color: #fff; flex-shrink: 0;
-  }
-  .chat-list .item .preview { flex: 1; }
-  .chat-list .item .preview .name { font-weight: 600; font-size: 12px; }
-  .chat-list .item .preview .msg { color: #94a3b8; font-size: 10px; white-space: nowrap; overflow: hidden; }
-  .chat-list .item .time { font-size: 9px; color: #94a3b8; text-align: right; }
+  /* ===== Chat screens ===== */
+  .chat-top{background:#1e3a5f;color:#fff;padding:36px 14px 12px;display:flex;align-items:center;gap:8px;font-weight:600;font-size:12px}
+  .chat-top .av{width:24px;height:24px;border-radius:50%;background:#4a7fb5;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;flex-shrink:0}
+  .chat-msgs{flex:1;padding:10px;display:flex;flex-direction:column;gap:8px}
+  .chat-b{max-width:75%;padding:7px 10px;border-radius:10px;font-size:10px;line-height:1.4}
+  .chat-b.m{align-self:flex-end;background:#1e3a5f;color:#fff;border-bottom-right-radius:3px}
+  .chat-b.o{align-self:flex-start;background:#fff;color:#1e293b;border-bottom-left-radius:3px}
+  .chat-b .tm{font-size:7px;opacity:.6;text-align:right;margin-top:2px}
+  .chat-in{display:flex;align-items:center;gap:6px;padding:6px 10px;background:#fff;border-top:1px solid #e9edf2}
+  .chat-in input{flex:1;border:none;background:#f1f5f9;border-radius:14px;padding:6px 12px;font-size:10px;outline:none}
 
-  /* Moments screen */
-  .moments-screen {
-    width: 100%; height: 100%; display: flex; flex-direction: column;
-    font-size: 11px; background: #fff; overflow: hidden;
-  }
-  .moments-screen .topbar {
-    background: #1e3a5f; color: #fff; padding: 36px 14px 12px;
-    font-size: 16px; font-weight: 700;
-  }
-  .moments-screen .post { padding: 14px; border-bottom: 1px solid #f1f4f9; }
-  .moments-screen .post .head { display: flex; gap: 10px; margin-bottom: 8px; }
-  .moments-screen .post .head .ava { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; }
-  .moments-screen .post .head .name { font-weight: 600; font-size: 12px; }
-  .moments-screen .post .txt { color: #475569; margin-bottom: 8px; font-size: 11px; }
-  .moments-screen .post .imgs { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; }
-  .moments-screen .post .imgs .i { height: 40px; border-radius: 4px; background: #e2e8f0; }
+  /* list */
+  .cl-top{background:#1e3a5f;color:#fff;padding:36px 14px 12px;display:flex;align-items:center;font-size:14px;font-weight:700}
+  .cl-i{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #f1f4f9;font-size:10px}
+  .cl-i .av{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
+  .cl-i .pr{flex:1}
+  .cl-i .pr .nm{font-weight:600;font-size:11px}
+  .cl-i .pr .ms{color:#94a3b8;font-size:9px;white-space:nowrap;overflow:hidden}
+  .cl-i .tm{font-size:8px;color:#94a3b8}
+
+  /* moments */
+  .mom-top{background:#1e3a5f;color:#fff;padding:36px 14px 12px;font-size:14px;font-weight:700}
+  .mom-p{padding:12px;border-bottom:1px solid #f1f4f9}
+  .mom-p .h{display:flex;gap:8px;margin-bottom:6px}
+  .mom-p .h .av{width:24px;height:24px;border-radius:50%;flex-shrink:0}
+  .mom-p .h .nm{font-weight:600;font-size:11px}
+  .mom-p .h .t2{font-size:8px;color:#94a3b8}
+  .mom-p .tx{color:#475569;font-size:10px;margin-bottom:6px}
+  .mom-p .imgs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px}
+  .mom-p .imgs .i{height:36px;border-radius:4px}
 
   /* ===== Skills ===== */
-  .skills-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;
-  }
-  .skill-group {
-    background: #fff; border-radius: 14px; padding: 28px;
-    border: 1px solid #e9edf2;
-  }
-  .skill-group h4 { font-size: 14px; font-weight: 700; color: #1e3a5f; margin-bottom: 14px; letter-spacing: .5px; }
-  .skill-group .techs { display: flex; flex-wrap: wrap; gap: 8px; }
-  .skill-group .techs span {
-    background: #f1f4f9; color: #334155; font-size: 13px;
-    padding: 4px 14px; border-radius: 8px; font-weight: 500;
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+  .skill-group{background:#fff;border-radius:14px;padding:28px;border:1px solid #e9edf2}
+  .skill-group h4{font-size:14px;font-weight:700;color:#1e3a5f;margin-bottom:14px;letter-spacing:.5px}
+  .skill-group .techs{display:flex;flex-wrap:wrap;gap:8px}
+  .skill-group .techs span{background:#f1f4f9;color:#334155;font-size:13px;padding:4px 14px;border-radius:8px;font-weight:500}
+
+  .contact-box{background:#fff;border-radius:16px;padding:48px;text-align:center;border:1px solid #e9edf2}
+  .contact-box h3{font-size:24px;font-weight:700;color:#0f172a;margin-bottom:12px}
+  .contact-box p{color:#64748b;margin-bottom:28px}
+  .contact-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+  .contact-links a{text-decoration:none;color:#1e3a5f;font-weight:600;font-size:15px;padding:10px 24px;border:2px solid #d0d8e5;border-radius:10px;transition:all .2s}
+  .contact-links a:hover{border-color:#1e3a5f;background:#f1f6ff}
+
+  footer{text-align:center;padding:32px 40px;color:#94a3b8;font-size:13px;border-top:1px solid #e9edf2}
+
+  @media(max-width:768px){
+    section,.showcase{padding:64px 24px}
+    .hero{padding:100px 24px}
+    nav{padding:0 20px}
+    nav .links{gap:16px}
+    .about-grid{grid-template-columns:1fr}
+    .showcase-card{padding:28px}
+    .phone{width:200px;height:412px;padding:8px;border-radius:28px}
+    .phone-screen{border-radius:20px}
+    .contact-box{padding:32px 24px}
   }
 
-  /* ===== Contact ===== */
-  .contact-box {
-    background: #fff; border-radius: 16px; padding: 48px;
-    text-align: center; border: 1px solid #e9edf2;
-  }
-  .contact-box h3 { font-size: 24px; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
-  .contact-box p { color: #64748b; margin-bottom: 28px; }
-  .contact-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-  .contact-links a {
-    text-decoration: none; color: #1e3a5f; font-weight: 600; font-size: 15px;
-    padding: 10px 24px; border: 2px solid #d0d8e5; border-radius: 10px;
-    transition: all .2s;
-  }
-  .contact-links a:hover { border-color: #1e3a5f; background: #f1f6ff; }
-
-  /* ===== Footer ===== */
-  footer {
-    text-align: center; padding: 32px 40px; color: #94a3b8;
-    font-size: 13px; border-top: 1px solid #e9edf2;
-  }
-
-  /* ===== Responsive ===== */
-  @media (max-width: 768px) {
-    section, .showcase { padding: 64px 24px; }
-    .hero { padding: 100px 24px; }
-    nav { padding: 0 20px; }
-    nav .links { gap: 16px; }
-    .about-grid { grid-template-columns: 1fr; }
-    .showcase-card { padding: 28px; }
-    .showcase-header { flex-direction: column; }
-    .phone { width: 200px; height: 412px; padding: 8px; border-radius: 28px; }
-    .phone-screen { border-radius: 20px; }
-    .contact-box { padding: 32px 24px; }
-  }
+  /* Typing animation */
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+  .cursor{display:inline-block;width:2px;height:12px;background:#1e3a5f;animation:blink .8s infinite;margin-left:1px;vertical-align:middle}
+  .typing-text{display:inline}
 </style>
 </head>
 <body>
@@ -455,7 +232,7 @@
 <div class="showcase" id="projects">
   <span class="sec-label">PROJECTS</span>
   <h2 class="sec-title">项目展示</h2>
-  <p class="sec-desc">点击每个项目底部的 GitHub 链接可以查看完整源码。</p>
+  <p class="sec-desc">点击 GitHub 查看源码，点击 APK 下载安装包。手机界面自动轮播展示。</p>
 
   <!-- ===== Seen ===== -->
   <div class="showcase-card">
@@ -468,118 +245,67 @@
         </div>
       </div>
       <div class="showcase-links">
+        <a href="https://github.com/TWOS21/TWOS21.github.io/releases/download/apks/Seen.apk" target="_blank">📲 下载 APK (18MB)</a>
         <a href="https://github.com/TWOS21/Seen" target="_blank">🐙 GitHub</a>
       </div>
     </div>
-
     <p style="color:#64748b;margin-bottom:24px;">
       面向创作者的个人作品展馆。支持作品管理、分区分类、点赞评论收藏互动、数据看板、周月排行榜。
       Web 端 + 原生 Android APP 双端覆盖，15 天从 0 到 1 交付。
     </p>
 
-    <!-- Phone mockups -->
-    <div style="text-align:center;margin-bottom:16px;color:#94a3b8;font-size:13px;font-weight:600;">
-      ← 左右滑动 →
-    </div>
-    <div class="phone-wrap">
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="seen-screen">
-            <div class="seen-topbar">
-              <span class="back">‹</span>
-              我的展馆
-              <span class="more">⋯</span>
-            </div>
-            <div class="seen-banner">
-              <h2>刘双的作品集</h2>
-              <p>12 件作品 · 2 个分区</p>
-            </div>
-            <div class="seen-grid">
-              <div class="seen-card">
-                <div class="img-placeholder"></div>
-                <div class="title">光影之间</div>
-                <div class="meta">❤ 24</div>
-              </div>
-              <div class="seen-card">
-                <div class="img-placeholder g2"></div>
-                <div class="title">城市记忆</div>
-                <div class="meta">❤ 18</div>
-              </div>
-              <div class="seen-card">
-                <div class="img-placeholder g3"></div>
-                <div class="title">自然物语</div>
-                <div class="meta">❤ 32</div>
-              </div>
-              <div class="seen-card">
-                <div class="img-placeholder g4"></div>
-                <div class="title">抽象派</div>
-                <div class="meta">❤ 15</div>
-              </div>
-            </div>
-            <div class="seen-bottombar">
-              <span class="active">🏠 首页</span>
-              <span>📊 排行</span>
-              <span>📋 看板</span>
-              <span>👤 我的</span>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">主页 · 作品流</div>
-      </div>
-
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="seen-detail">
-            <div class="hero-img">
-              <span class="back">‹</span>
-              <span style="color:#fff;font-weight:600;">光影之间</span>
-            </div>
-            <div class="content">
-              <h3>光影之间</h3>
-              <div class="desc">
-                用镜头记录城市中每一个被光眷顾的角落。这组作品拍摄于上海老城区，捕捉了午后阳光穿过弄堂的瞬间。
-              </div>
-              <div class="stats">
-                <span>❤ 24</span>
-                <span>💬 6</span>
-                <span>⭐ 12</span>
-                <span>👁 156</span>
-              </div>
-              <div class="comments">
-                <div class="comment">
-                  <div class="ava"></div>
-                  <div><span class="name">小艺</span><div class="txt">这张光影太绝了！</div></div>
+    <div class="phone" id="seen-phone">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="carousel" id="seen-carousel">
+          <div class="carousel-track" id="seen-track">
+            <!-- Slide 1: Home -->
+            <div class="carousel-slide">
+              <div style="display:flex;flex-direction:column;height:100%">
+                <div class="s-top">我的展馆</div>
+                <div class="s-banner"><h2>刘双的作品集</h2><p>12 件作品 · 2 个分区</p></div>
+                <div class="s-grid">
+                  <div class="s-card"><div class="im"></div><div class="ti">光影之间</div><div class="me">❤ 24</div></div>
+                  <div class="s-card"><div class="im g2"></div><div class="ti">城市记忆</div><div class="me">❤ 18</div></div>
+                  <div class="s-card"><div class="im g3"></div><div class="ti">自然物语</div><div class="me">❤ 32</div></div>
+                  <div class="s-card"><div class="im g4"></div><div class="ti">抽象派</div><div class="me">❤ 15</div></div>
+                  <div class="s-card"><div class="im"></div><div class="ti">街角</div><div class="me">❤ 21</div></div>
+                  <div class="s-card"><div class="im g2"></div><div class="ti">雨后</div><div class="me">❤ 13</div></div>
                 </div>
-                <div class="comment">
-                  <div class="ava"></div>
-                  <div><span class="name">阿明</span><div class="txt">构图很舒服</div></div>
+                <div class="s-nav"><span class="on">🏠 首页</span><span>📊 排行</span><span>📋 看板</span><span>👤 我的</span></div>
+              </div>
+            </div>
+            <!-- Slide 2: Detail -->
+            <div class="carousel-slide">
+              <div style="display:flex;flex-direction:column;height:100%">
+                <div class="sd-hero"><span class="t">光影之间</span></div>
+                <div class="sd-c">
+                  <h4>光影之间</h4>
+                  <div class="d">用镜头记录城市中每一个被光眷顾的角落。拍摄于上海老城区，捕捉午后阳光穿过弄堂的瞬间。</div>
+                  <div class="st"><span>❤ 24</span><span>💬 6</span><span>⭐ 12</span><span>👁 156</span></div>
+                  <div class="cm">
+                    <div class="i"><div class="av"></div><div><span class="nm">小艺</span><div class="tx">这张光影太绝了！</div></div></div>
+                    <div class="i"><div class="av"></div><div><span class="nm">阿明</span><div class="tx">构图很舒服</div></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3: Leaderboard -->
+            <div class="carousel-slide">
+              <div style="display:flex;flex-direction:column;height:100%">
+                <div class="sr-t"><span class="on">本周</span><span>本月</span></div>
+                <div class="sr-l">
+                  <div class="i"><span class="nu t">1</span><div class="th"></div><div><b>光影之间</b><br><span style="color:#94a3b8">👁 156</span></div></div>
+                  <div class="i"><span class="nu t">2</span><div class="th" style="background:linear-gradient(135deg,#d4f0dd,#a8e0bc)"></div><div><b>自然物语</b><br><span style="color:#94a3b8">👁 132</span></div></div>
+                  <div class="i"><span class="nu t">3</span><div class="th" style="background:linear-gradient(135deg,#f0dfd4,#e0bca8)"></div><div><b>城市记忆</b><br><span style="color:#94a3b8">👁 98</span></div></div>
+                  <div class="i"><span class="nu">4</span><div class="th" style="background:linear-gradient(135deg,#e0d4f0,#c0a8e0)"></div><div><b>抽象派</b><br><span style="color:#94a3b8">👁 67</span></div></div>
+                  <div class="i"><span class="nu">5</span><div class="th"></div><div><b>街角</b><br><span style="color:#94a3b8">👁 54</span></div></div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="carousel-dots" id="seen-dots"></div>
         </div>
-        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">作品详情 · 互动</div>
-      </div>
-
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="seen-rank">
-            <div class="tabbar">
-              <span class="active">本周</span>
-              <span>本月</span>
-            </div>
-            <div class="list">
-              <div class="item"><span class="num top3">1</span><div class="thumb"></div><div><b>光影之间</b><br><span style="color:#94a3b8;">👁 156</span></div></div>
-              <div class="item"><span class="num top3">2</span><div class="thumb g2"></div><div><b>自然物语</b><br><span style="color:#94a3b8;">👁 132</span></div></div>
-              <div class="item"><span class="num top3">3</span><div class="thumb g3"></div><div><b>城市记忆</b><br><span style="color:#94a3b8;">👁 98</span></div></div>
-              <div class="item"><span class="num">4</span><div class="thumb g4"></div><div><b>抽象派</b><br><span style="color:#94a3b8;">👁 67</span></div></div>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">排行榜 · 周/月</div>
       </div>
     </div>
 
@@ -607,131 +333,72 @@
         </div>
       </div>
       <div class="showcase-links">
+        <a href="https://github.com/TWOS21/TWOS21.github.io/releases/download/apks/ChatApp.apk" target="_blank">📲 下载 APK (51MB)</a>
         <a href="https://github.com/TWOS21/ChatApp" target="_blank">🐙 GitHub</a>
       </div>
     </div>
-
     <p style="color:#64748b;margin-bottom:24px;">
       对标微信核心功能的即时通讯软件。实时文字/图片/语音/视频聊天、好友系统、朋友圈动态。
       REST + WebSocket 双通道架构，APK 真机运行通过。
     </p>
 
-    <div style="text-align:center;margin-bottom:16px;color:#94a3b8;font-size:13px;font-weight:600;">
-      ← 左右滑动 →
-    </div>
-    <div class="phone-wrap">
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="chat-list">
-            <div class="topbar">
-              <h3>消息</h3>
-              <span>✚</span>
-            </div>
-            <div class="item">
-              <div class="ava" style="background:#4a7fb5;">小</div>
-              <div class="preview"><div class="name">小艺</div><div class="msg">好的，下午见！</div></div>
-              <div class="time">10:32</div>
-            </div>
-            <div class="item">
-              <div class="ava" style="background:#e67e22;">阿</div>
-              <div class="preview"><div class="name">阿明</div><div class="msg">你发的图片我看了</div></div>
-              <div class="time">09:15</div>
-            </div>
-            <div class="item">
-              <div class="ava" style="background:#2ecc71;">大</div>
-              <div class="preview"><div class="name">大学群</div><div class="msg">有人周末去打球吗</div></div>
-              <div class="time">昨天</div>
-            </div>
-            <div class="item">
-              <div class="ava" style="background:#9b59b6;">家</div>
-              <div class="preview"><div class="name">家人群</div><div class="msg">[图片]</div></div>
-              <div class="time">昨天</div>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">会话列表</div>
-      </div>
-
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="chat-screen">
-            <div class="chat-topbar">
-              <span class="back">‹</span>
-              <div class="ava">小</div>
-              <span class="name">小艺</span>
-              <span class="more">⋯</span>
-            </div>
-            <div class="chat-messages">
-              <div class="chat-bubble other">
-                在吗？
-                <div class="time">10:15</div>
+    <div class="phone" id="chatapp-phone">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="carousel" id="chatapp-carousel">
+          <div class="carousel-track" id="chatapp-track">
+            <!-- Slide 1: Chat list -->
+            <div class="carousel-slide">
+              <div style="display:flex;flex-direction:column;height:100%;background:#fff">
+                <div class="cl-top">消息</div>
+                <div class="cl-i"><div class="av" style="background:#4a7fb5;">小</div><div class="pr"><div class="nm">小艺</div><div class="ms">好的，下午见！</div></div><div class="tm">10:32</div></div>
+                <div class="cl-i"><div class="av" style="background:#e67e22;">阿</div><div class="pr"><div class="nm">阿明</div><div class="ms">你发的图片我看了</div></div><div class="tm">09:15</div></div>
+                <div class="cl-i"><div class="av" style="background:#2ecc71;">大</div><div class="pr"><div class="nm">大学群</div><div class="ms">有人周末去打球吗</div></div><div class="tm">昨天</div></div>
+                <div class="cl-i"><div class="av" style="background:#9b59b6;">家</div><div class="pr"><div class="nm">家人群</div><div class="ms">[图片]</div></div><div class="tm">昨天</div></div>
+                <div class="cl-i"><div class="av" style="background:#e74c3c;">同</div><div class="pr"><div class="nm">同事群</div><div class="ms">收到，马上改</div></div><div class="tm">昨天</div></div>
               </div>
-              <div class="chat-bubble mine">
-                在呢
-                <div class="time">10:16</div>
+            </div>
+            <!-- Slide 2: Chat -->
+            <div class="carousel-slide">
+              <div style="display:flex;flex-direction:column;height:100%;background:#f1f5f9">
+                <div class="chat-top"><div class="av">小</div>小艺</div>
+                <div class="chat-msgs">
+                  <div class="chat-b o">在吗？<div class="tm">10:15</div></div>
+                  <div class="chat-b m">在呢<div class="tm">10:16</div></div>
+                  <div class="chat-b o">下午有空吗？去看新展<div class="tm">10:18</div></div>
+                  <div class="chat-b m">好啊几点<div class="tm">10:20</div></div>
+                  <div class="chat-b o">三点？<div class="tm">10:22</div></div>
+                  <div class="chat-b m" id="typing-msg">好<span class="typing-text" id="chat-typing"></span><span class="cursor"></span><div class="tm">10:32</div></div>
+                </div>
+                <div class="chat-in"><input placeholder="输入消息..." value="好的，下午见！"></div>
               </div>
-              <div class="chat-bubble other">
-                下午有空吗？想去看那个新展
-                <div class="time">10:18</div>
-              </div>
-              <div class="chat-bubble mine">
-                好啊几点
-                <div class="time">10:20</div>
-              </div>
-              <div class="chat-bubble other">
-                三点？
-                <div class="time">10:22</div>
-              </div>
-              <div class="chat-image-bubble">
-                <div class="img">🖼️</div>
-                <div style="padding:6px 10px;background:#fff;font-size:10px;color:#475569;">
-                  好的，下午见！<br><span style="color:#94a3b8;">10:32</span>
+            </div>
+            <!-- Slide 3: Moments -->
+            <div class="carousel-slide">
+              <div style="display:flex;flex-direction:column;height:100%;background:#fff;overflow:hidden">
+                <div class="mom-top">朋友圈</div>
+                <div class="moments-scroll" id="moments-scroll" style="flex:1;overflow:hidden;">
+                  <div class="mom-p">
+                    <div class="h"><div class="av" style="background:#4a7fb5;"></div><div><div class="nm">小艺</div><div class="t2">10分钟前</div></div></div>
+                    <div class="tx">今天的夕阳太美了🌅</div>
+                    <div class="imgs"><div class="i" style="background:linear-gradient(135deg,#f7c948,#f59e0b)"></div><div class="i" style="background:linear-gradient(135deg,#f59e0b,#ef7a3a)"></div><div class="i" style="background:linear-gradient(135deg,#ef7a3a,#e04f3d)"></div></div>
+                  </div>
+                  <div class="mom-p">
+                    <div class="h"><div class="av" style="background:#2ecc71;"></div><div><div class="nm">阿明</div><div class="t2">昨天</div></div></div>
+                    <div class="tx">新学的菜，味道不错！</div>
+                    <div class="imgs"><div class="i" style="background:linear-gradient(135deg,#a8e0bc,#7bc99a)"></div><div class="i" style="background:linear-gradient(135deg,#7bc99a,#4fb081)"></div></div>
+                  </div>
+                  <div class="mom-p">
+                    <div class="h"><div class="av" style="background:#9b59b6;"></div><div><div class="nm">Lily</div><div class="t2">前天</div></div></div>
+                    <div class="tx">周末一起去爬山吧🏔️</div>
+                    <div class="imgs"><div class="i" style="background:linear-gradient(135deg,#a8c0e0,#8bb5d4)"></div><div class="i" style="background:linear-gradient(135deg,#8bb5d4,#6fa8c9)"></div></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="chat-inputbar">
-              <span class="plus">⊕</span>
-              <input placeholder="输入消息...">
-              <span class="send">发送</span>
-            </div>
           </div>
+          <div class="carousel-dots" id="chatapp-dots"></div>
         </div>
-        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">实时聊天</div>
-      </div>
-
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="moments-screen">
-            <div class="topbar">朋友圈</div>
-            <div class="post">
-              <div class="head">
-                <div class="ava" style="background:#4a7fb5;"></div>
-                <div><div class="name">小艺</div><div style="font-size:9px;color:#94a3b8;">10分钟前</div></div>
-              </div>
-              <div class="txt">今天的夕阳太美了🌅</div>
-              <div class="imgs">
-                <div class="i" style="background:linear-gradient(135deg,#f7c948,#f59e0b);"></div>
-                <div class="i" style="background:linear-gradient(135deg,#f59e0b,#ef7a3a);"></div>
-                <div class="i" style="background:linear-gradient(135deg,#ef7a3a,#e04f3d);"></div>
-              </div>
-            </div>
-            <div class="post">
-              <div class="head">
-                <div class="ava" style="background:#2ecc71;"></div>
-                <div><div class="name">阿明</div><div style="font-size:9px;color:#94a3b8;">昨天</div></div>
-              </div>
-              <div class="txt">新学的菜，味道不错！</div>
-              <div class="imgs">
-                <div class="i" style="background:linear-gradient(135deg,#a8e0bc,#7bc99a);"></div>
-                <div class="i" style="background:linear-gradient(135deg,#7bc99a,#4fb081);"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style="text-align:center;color:#94a3b8;font-size:10px;margin-top:6px;">朋友圈</div>
       </div>
     </div>
 
@@ -755,65 +422,110 @@
   <h2 class="sec-title">技术栈</h2>
   <p class="sec-desc">后端为主，同时覆盖移动端和前端。</p>
   <div class="skills-grid">
-    <div class="skill-group">
-      <h4>后端开发</h4>
-      <div class="techs">
-        <span>Python</span><span>FastAPI</span><span>SQLAlchemy</span>
-        <span>MySQL</span><span>SQLite</span><span>JWT</span>
-        <span>WebSocket</span><span>RESTful API</span><span>SSE</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4>移动端</h4>
-      <div class="techs">
-        <span>Flutter</span><span>Dart</span><span>Provider</span>
-        <span>Dio</span><span>Kotlin</span><span>Compose</span>
-        <span>Retrofit</span><span>Coil</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4>前端 &amp; 工具</h4>
-      <div class="techs">
-        <span>Vue3</span><span>TypeScript</span><span>Vite</span>
-        <span>Axios</span><span>Git</span><span>Postman</span>
-        <span>Linux Shell</span><span>Gradle</span>
-      </div>
-    </div>
-    <div class="skill-group">
-      <h4>AI 辅助</h4>
-      <div class="techs">
-        <span>Claude Code</span><span>AI 编程</span>
-        <span>Prompt 工程</span><span>效率提升 ~60%</span>
-      </div>
-    </div>
+    <div class="skill-group"><h4>后端开发</h4><div class="techs"><span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>MySQL</span><span>SQLite</span><span>JWT</span><span>WebSocket</span><span>RESTful API</span><span>SSE</span></div></div>
+    <div class="skill-group"><h4>移动端</h4><div class="techs"><span>Flutter</span><span>Dart</span><span>Provider</span><span>Dio</span><span>Kotlin</span><span>Compose</span><span>Retrofit</span><span>Coil</span></div></div>
+    <div class="skill-group"><h4>前端 &amp; 工具</h4><div class="techs"><span>Vue3</span><span>TypeScript</span><span>Vite</span><span>Axios</span><span>Git</span><span>Postman</span><span>Linux Shell</span><span>Gradle</span></div></div>
+    <div class="skill-group"><h4>AI 辅助</h4><div class="techs"><span>Claude Code</span><span>AI 编程</span><span>Prompt 工程</span><span>效率提升 ~60%</span></div></div>
   </div>
 </section>
 
-<!-- Contact -->
 <section id="contact">
-  <span class="sec-label">CONTACT</span>
   <div class="contact-box">
     <h3>保持联系</h3>
     <p>如果你对我的项目感兴趣，或者有合适的岗位机会，欢迎联系。</p>
     <div class="contact-links">
       <a href="mailto:2634116101@qq.com">📧 发送邮件</a>
       <a href="https://github.com/TWOS21" target="_blank">🐙 GitHub</a>
-      <a href="F:/刘双_简历_v5.pdf" target="_blank">📄 下载简历</a>
     </div>
   </div>
 </section>
 
-<footer>
-  刘双 · 2026 · 个人作品集
-</footer>
+<footer>刘双 · 2026 · 个人作品集</footer>
 
 <script>
-  document.querySelectorAll('nav a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
-    });
+// Smooth scroll nav
+document.querySelectorAll('nav a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
   });
+});
+
+// ===== Carousel =====
+function initCarousel(carouselId, trackId, dotsId, interval) {
+  const track = document.getElementById(trackId);
+  const dots = document.getElementById(dotsId);
+  const slides = track.querySelectorAll('.carousel-slide');
+  if (!slides.length) return;
+  let idx = 0;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.addEventListener('click', () => goTo(i));
+    dots.appendChild(dot);
+  });
+  dots.children[0].classList.add('active');
+
+  function goTo(i) {
+    idx = ((i % slides.length) + slides.length) % slides.length;
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    [...dots.children].forEach((d, j) => d.classList.toggle('active', j === idx));
+  }
+
+  function next() { goTo(idx + 1); }
+
+  let timer = setInterval(next, interval);
+
+  // Pause on hover
+  const el = document.getElementById(carouselId);
+  el.addEventListener('mouseenter', () => clearInterval(timer));
+  el.addEventListener('mouseleave', () => { timer = setInterval(next, interval); });
+
+  return { goTo, next };
+}
+
+initCarousel('seen-carousel', 'seen-track', 'seen-dots', 3000);
+initCarousel('chatapp-carousel', 'chatapp-track', 'chatapp-dots', 3500);
+
+// ===== Chat typing animation =====
+function typeWriter(el, text, speed = 60) {
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      el.textContent = text.substring(0, i + 1);
+      i++;
+      setTimeout(type, speed);
+    }
+  }
+  type();
+}
+
+// Start typing after a delay
+setTimeout(() => {
+  const el = document.getElementById('chat-typing');
+  if (el) typeWriter(el, '好的，下午见！');
+}, 1500);
+
+// ===== Auto-scroll for moments =====
+(function autoScrollMoments() {
+  const scrollEl = document.getElementById('moments-scroll');
+  if (!scrollEl) return;
+  let pos = 0;
+  const speed = 0.3; // px per frame
+  function scroll() {
+    pos += speed;
+    const maxScroll = scrollEl.scrollHeight - scrollEl.clientHeight;
+    if (pos >= maxScroll) { pos = 0; }
+    scrollEl.scrollTop = pos;
+    requestAnimationFrame(scroll);
+  }
+  // Only start on the moments slide
+  const carousel = document.getElementById('chatapp-carousel');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', () => {});
+  }
+  setTimeout(scroll, 3000);
+})();
 </script>
 </body>
 </html>
